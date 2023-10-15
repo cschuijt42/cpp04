@@ -1,0 +1,18 @@
+#ifndef H_Cat
+#define H_Cat
+#include <string>
+#include "Animal.hpp"
+
+class Cat : public Animal {
+	public:
+		Cat( void );
+		Cat(const Cat& src);
+
+		Cat& operator=(const Cat& src);
+
+		~Cat();
+
+		void makeSound( void ) const;
+};
+
+#endif

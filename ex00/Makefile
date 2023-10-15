@@ -16,14 +16,14 @@ SOURCEFILES	:=	main.cpp \
 				Animal.cpp \
 				Dog.cpp \
 				Cat.cpp \
-				WrongAnimal.cpp \
-				WrongCat.cpp
+				# WrongAnimal.cpp \
+				# WrongCat.cpp
 
 HEADERS	:=	Animal.hpp \
 			Dog.hpp \
 			Cat.hpp \
-			WrongAnimal.hpp \
-			WrongCat.hpp
+			# WrongAnimal.hpp \
+			# WrongCat.hpp
 
 OFILES	:=	$(SOURCEFILES:.cpp=.o)
 # SRC_DIR	:=	src
