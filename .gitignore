@@ -10,7 +10,7 @@ obj/*
 valgrind-out.txt
 misc/*
 readline.supp
-ex00/claptrap
+ex00/animals
 ex01/claptrap
 ex02/claptrap
 ex03/claptrap
