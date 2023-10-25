@@ -5,12 +5,9 @@ ifeq ($(UNAME_S), Darwin)
 else
 	CC				:= cc
 endif
-ifeq ($(UNAME_S), Darwin)
-	COMPIL_FLAGS	?= -Wall -Wextra -Werror -std=c++17
-else
-	COMPIL_FLAGS	?= -Wall -Wextra -Werror -std=c++17 -lstdc++
-endif
-INCLUDE_FLAGS		?=
+
+COMPIL_FLAGS	?= -Wall -Wextra -Werror -std=c++17
+INCLUDE_FLAGS		?= -lstdc++
 
 SOURCEFILES	:=	main.cpp \
 				Animal.cpp \
