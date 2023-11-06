@@ -1,6 +1,8 @@
 #include "Animal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 #include <iostream>
 
 int main( void ) {
@@ -10,6 +12,7 @@ int main( void ) {
 
 	std::cout << c->getType() << " " << std::endl;
 	std::cout << d->getType() << " " << std::endl;
+
 	c->makeSound();
 	d->makeSound();
 	a->makeSound();
@@ -17,5 +20,18 @@ int main( void ) {
 	delete(a);
 	delete(c);
 	delete(d);
+
+	const WrongAnimal* wa = new WrongAnimal();
+	const WrongCat*    wc = new WrongCat();
+
+	std::cout << wa->getType() << " " << std::endl;
+	std::cout << wc->getType() << " " << std::endl;
+
+	wa->makeSound();
+	wc->makeSound();
+
+	delete(wa);
+	delete(wc);
+
 	return 0;
 }

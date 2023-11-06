@@ -7,20 +7,20 @@ else
 endif
 
 COMPIL_FLAGS	?= -Wall -Wextra -Werror -std=c++17
-INCLUDE_FLAGS		?= -lstdc++
+INCLUDE_FLAGS	?= -lstdc++
 
 SOURCEFILES	:=	main.cpp \
 				Animal.cpp \
 				Dog.cpp \
 				Cat.cpp \
-				# WrongAnimal.cpp \
-				# WrongCat.cpp
+				WrongAnimal.cpp \
+				WrongCat.cpp
 
 HEADERS	:=	Animal.hpp \
 			Dog.hpp \
 			Cat.hpp \
-			# WrongAnimal.hpp \
-			# WrongCat.hpp
+			WrongAnimal.hpp \
+			WrongCat.hpp
 
 OFILES	:=	$(SOURCEFILES:.cpp=.o)
 # SRC_DIR	:=	src
@@ -36,7 +36,7 @@ $(NAME) : $(OBJS)
 
 $(OBJ_DIR)/%.o : %.cpp $(HEADERS) | $(OBJ_DIR)
 	@printf "$(COMP_BEFORE)$(notdir $<)$(COMP_AFTER)"
-	@$(CC) $(COMPIL_FLAGS) -o $@ -c $< $(INCLUDE_FLAGS)
+	@$(CC) $(COMPIL_FLAGS) -o $@ -c $<
 	@printf "$(COMP_DONE)"
 
 $(OBJ_DIR) :
