@@ -12,5 +12,5 @@ misc/*
 readline.supp
 ex00/animals
 ex01/brain
-ex02/claptrap
-ex03/claptrap
+ex02/interface
+ex03/materia
