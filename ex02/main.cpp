@@ -37,5 +37,10 @@ int main( void ) {
 		delete array[i];
 	}
 
+	// Does not compile because Animal can't be instantiated on its own:
+
+	// const Animal* animal1 = new Animal();
+	// const Animal* animal2 = new Animal(*animal1);
+
 	return 0;
 }
