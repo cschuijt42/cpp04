@@ -38,6 +38,10 @@ int main( void ) {
 		src->learnMateria(new Cure());
 
 		src2->learnMateria(new Ice());
+		src2->learnMateria(new Ice());
+		src2->learnMateria(new Ice());
+		src2->learnMateria(new Ice());
+		src2->learnMateria(new Ice());
 
 		*src = *src2;
 
