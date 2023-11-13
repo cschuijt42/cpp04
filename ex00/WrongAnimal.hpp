@@ -9,11 +9,11 @@ class WrongAnimal {
 
 		WrongAnimal& operator=(const WrongAnimal& src);
 
-		~WrongAnimal();
+		virtual ~WrongAnimal();
 
 		const std::string& getType( void ) const;
 
-		void makeSound( void ) const;
+		virtual void makeSound( void ) const;
 
 	protected:
 		std::string type = "WrongAnimal";

@@ -9,11 +9,11 @@ class Animal {
 
 		Animal& operator=(const Animal& src);
 
-		~Animal();
+		virtual ~Animal();
 
 		const std::string& getType( void ) const;
 
-		void makeSound( void ) const;
+		virtual void makeSound( void ) const;
 
 	protected:
 		std::string type = "Animal";
