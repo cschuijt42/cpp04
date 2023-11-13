@@ -6,15 +6,23 @@ else
 	CC				:= cc
 endif
 
-COMPIL_FLAGS	?= -Wall -Wextra -Werror -std=c++11 -fsanitize=address
+COMPIL_FLAGS	?= -Wall -Wextra -Werror -std=c++11 -fsanitize=address -g
 INCLUDE_FLAGS	?= -lstdc++
 
 SOURCEFILES	:=	main.cpp \
 				AMateria.cpp \
-				ICharacter.cpp
+				Ice.cpp \
+				Cure.cpp \
+				Character.cpp \
+				MateriaSource.cpp
 
 HEADERS	:=	AMateria.hpp \
-			ICharacter.hpp
+			Ice.hpp \
+			Cure.hpp \
+			ICharacter.hpp \
+			Character.hpp \
+			IMateriaSource.hpp \
+			MateriaSource.hpp
 
 OFILES	:=	$(SOURCEFILES:.cpp=.o)
 # SRC_DIR	:=	src

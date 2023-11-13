@@ -1,17 +1,14 @@
-#ifndef H_ICharacter
-#define H_ICharacter
+#pragma once
+#include <string>
+#include "AMateria.hpp"
 
 class ICharacter {
 	public:
-		ICharacter( void );
-		ICharacter(const ICharacter& src);
+		virtual ~ICharacter() {}
 
-		ICharacter& operator=(const ICharacter& src);
+		virtual std::string const & getName() const = 0;
 
-		~ICharacter();
-
-	protected:
-		std::string name;
+		virtual void equip(AMateria* m) = 0;
+		virtual void unequip(int idx) = 0;
+		virtual void use(int idx, ICharacter& target) = 0;
 };
-
-#endif
